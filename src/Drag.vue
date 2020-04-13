@@ -6,6 +6,9 @@
 		@dragenter="emitEvent(events.dragenter, $event)"
 		@dragleave="emitEvent(events.dragleave, $event)"
 		@dragend="emitEvent(events.dragend, $event)"
+		@touchstart="emitEvent(events.dragstart, $event)"
+		@touchmove="emitEvent(events.drag, $event)"
+		@touchend="emitEvent(events.dragend, $event)"
 	>
 		<slot :transfer-data="scopedData"></slot>
 		<div v-if="hideImageHtml" :style="hideImageStyle">
